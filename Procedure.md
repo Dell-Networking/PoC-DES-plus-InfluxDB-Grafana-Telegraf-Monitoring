@@ -9,10 +9,10 @@ From SONiC Device point of view you need 2 actions:
 
 2-
 Create an Ubuntu Virtual machine with "good amount" of cpu/ram
-- 2.1 install prometheus on Ubuntu
-  -> copy prometheus.yml under /etc/prometheus/
-  - file under/files/
-- 2.2 install grafana on Ubuntu
+- 2.1 install prometheus on Ubuntu (standard procedure)
+  - copy prometheusv2.yml under /etc/prometheus/
+  - file is available in this repo on /src/
+- 2.2 install grafana on Ubuntu (standard procedure)
 
 3-
 Configure the different aspect of the Grafana/Prometheus dashboard
