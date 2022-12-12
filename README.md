@@ -16,6 +16,8 @@ The formatting here should be basically maintained, with the source code in the 
 
 This repository is focusing on SONiC-telemetry setup using Telegraf plug-in running on DES SONiC. Telegraf stream data to Prometheus dB and Grafana is use to make information human readable. All aspects of this configuration can be customized.
 
+please read "procedure" file first, this explain the step-by-step tasks needed
+
 
 ## 📋 Requirements
 
