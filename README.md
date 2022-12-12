@@ -27,4 +27,4 @@ This repository has been tested with DES SOniC and ubuntu 20.04LTS
 We welcome contributions to the project. Please reference the CONTRIBUTING guide for more details.
 
 ## Acknowledgement
-valerio.martini@gmail.com  
+@val3r1o https://github.com/val3r1o
