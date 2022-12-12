@@ -9,7 +9,7 @@ The formatting here should be basically maintained, with the source code in the 
 - [Description and Objective](#-description-and-objective)
 - [Requirements](#-requirements)
 - [How to Contribute](#-how-to-contribute)
-- [Acknowledgement](#Acknowledgement) 
+- [Acknowledgement](#Acknowledgement)
 
 
 ## 🚀 Description and Objective
@@ -18,7 +18,7 @@ This repository is focusing on SONiC-telemetry setup using Telegraf plug-in runn
 
 please read "Procedure" file first, this explain the step-by-step tasks needed
 
-[Procedure]Procedure
+[Procedure](Procedure.md)
 
 ## 📋 Requirements
 
@@ -29,5 +29,5 @@ This repository has been tested with DES SOniC and ubuntu 20.04LTS
 
 We welcome contributions to the project. Please reference the CONTRIBUTING guide for more details.
 
-## Acknowledgement
+## Acknowledgement 
 @val3r1o https://github.com/val3r1o
