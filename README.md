@@ -1,10 +1,4 @@
-# Template repo for SONiC PoC Repos
-
----
-title: "Template repo for SONiC PoC Repos"
-author: Ben Goldstone
-date: "1 November 2022"
----
+# Telegraf-Prometheus-Grafana
 
 This is the template repo for Dell Enterprise SONiC Proof-of-Concept repos. Adopt this repo as you see fit to meet your needs as you build out a reference PoC repo.
 
@@ -15,18 +9,22 @@ The formatting here should be basically maintained, with the source code in the 
 - [Description and Objective](#-description-and-objective)
 - [Requirements](#-requirements)
 - [How to Contribute](#-how-to-contribute)
+- [acknowledgement](#Acknowledgement) 
 
 
 ## 🚀 Description and Objective
 
-Use this space to provide clarity around what the objective of the PoC is and what the end result of successfully running through the exercise should look like.
+This repository is focusing on SONiC-telemetry setup using Telegraf plug-in running on DES SONiC. Telegraf stream data to Prometheus dB and Grafana is use to make information human readable. All aspects of this configuration can be customized.
 
 
 ## 📋 Requirements
 
-Be sure to list requirements for building and utilizing the example PoC code here. This can include details such as languages / libraries / tools that must be used as well as what platforms the code has been validated to run on (Linux, MacOS, Windows, etc.) Additional details may be added in the README under the src folder.
+This repository has been tested with DES SOniC and ubuntu 20.04LTS 
 
 
 ## 👏 How to Contribute
 
 We welcome contributions to the project. Please reference the CONTRIBUTING guide for more details.
+
+## Acknowledgement
+valerio.martini@gmail.com  
