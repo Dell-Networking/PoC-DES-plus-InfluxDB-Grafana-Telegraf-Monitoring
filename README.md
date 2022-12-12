@@ -9,7 +9,7 @@ The formatting here should be basically maintained, with the source code in the 
 - [Description and Objective](#-description-and-objective)
 - [Requirements](#-requirements)
 - [How to Contribute](#-how-to-contribute)
-- [acknowledgement](#Acknowledgement) 
+- [Acknowledgement](#Acknowledgement) 
 
 
 ## 🚀 Description and Objective
