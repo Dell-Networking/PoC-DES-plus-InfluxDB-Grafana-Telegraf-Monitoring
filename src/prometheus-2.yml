@@ -56,12 +56,6 @@ scrape_configs:
     # scheme defaults to 'http'.
     static_configs:
       - targets: ["10.204.11.106:9191"]
-  - job_name: "OOB-EXT-OS10"
-    metrics_path: /snmp
-    # metrics_path defaults to '/metrics'
-    # scheme defaults to 'http'.
-    static_configs:
-      - targets: ["10.204.10.107:9191"]
 
 ############################################################################################
 # The job name is added as a label `job=<job_name>` to any timeseries scraped from this config.
