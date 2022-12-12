@@ -1,0 +1,68 @@
+# my global config
+global:
+  scrape_interval: 1s # Set the scrape interval to every 15 seconds. Default is every 1 minute.
+  evaluation_interval: 1s # Evaluate rules every 15 seconds. The default is every 1 minute.
+  # scrape_timeout is set to the global default (10s).
+
+# Alertmanager configuration
+alerting:
+  alertmanagers:
+    - static_configs:
+        - targets:
+          # - alertmanager:9093
+
+# Load rules once and periodically evaluate them according to the global 'evaluation_interval'.
+rule_files:
+  # - "first_rules.yml"
+  # - "second_rules.yml"
+
+# A scrape configuration containing exactly one endpoint to scrape:
+# Here it's Prometheus itself.
+scrape_configs:
+  # The job name is added as a label `job=<job_name>` to any timeseries scraped from this config.
+  - job_name: "spine1"
+    metrics_path: /sonic_prometheus
+    # metrics_path defaults to '/metrics'
+    # scheme defaults to 'http'.
+    static_configs:
+      - targets: ["10.204.10.60:9191"]
+  - job_name: "spine2"
+    metrics_path: /sonic_prometheus
+    # metrics_path defaults to '/metrics'
+    # scheme defaults to 'http'.
+    static_configs:
+      - targets: ["10.204.10.61:9191"]
+  - job_name: "leaf1"
+    metrics_path: /sonic_prometheus
+    # metrics_path defaults to '/metrics'
+    # scheme defaults to 'http'.
+    static_configs:
+      - targets: ["10.204.10.62:9191"]
+  - job_name: "leaf2"
+    metrics_path: /sonic_prometheus
+    # metrics_path defaults to '/metrics'
+    # scheme defaults to 'http'.
+    static_configs:
+      - targets: ["10.204.10.63:9191"]
+  - job_name: "leaf3"
+    metrics_path: /sonic_prometheus
+    # metrics_path defaults to '/metrics'
+    # scheme defaults to 'http'.
+    static_configs:
+      - targets: ["10.204.10.64:9191"]
+  - job_name: "leaf4"
+    metrics_path: /sonic_prometheus
+    # metrics_path defaults to '/metrics'
+    # scheme defaults to 'http'.
+    static_configs:
+      - targets: ["10.204.10.65:9191"]
+############################################################################################
+# this is for node_exporter part. .
+  - job_name: "leaf1-linux"
+    metrics_path: /metrics
+    # metrics_path defaults to '/metrics'
+    # scheme defaults to 'http'.
+    static_configs:
+      - targets: ["10.204.10.62:9100"]
+
+# end
