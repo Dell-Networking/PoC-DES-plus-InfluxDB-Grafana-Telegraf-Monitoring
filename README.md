@@ -1,19 +1,30 @@
-# SONiC-telemetry setup
+# Telegraf-Prometheus-Grafana
 
-Step-by-Step procedure: </br>
-</br>
-1-
-From SONiC Device point of view you need 2 actions:
-- 1.1 install telegraf      on SONiC (debian) subsystem 
-- 1.2 install node_exporter on SONiC (debian) subsystem
+This is the template repo for Dell Enterprise SONiC Proof-of-Concept repos. Adopt this repo as you see fit to meet your needs as you build out a reference PoC repo.
 
-2-
-Create an Ubuntu Virtual machine with "good amount" of cpu/ram
-- 2.1 install prometheus on Ubuntu
-  -> copy prometheus.yml under /etc/prometheus/
-  - file under/files/
-- 2.2 install grafana on Ubuntu
+The formatting here should be basically maintained, with the source code in the src folder and an appropriate LICENCE and CONTRIBUTING guide available inline in the README or as separate files within the repo.
 
-3-
-Configure the different aspect of the Grafana/Prometheus dashboard
-- 3.1 install grafana dashboard (readme file under "files" folder)
+## Contents
+
+- [Description and Objective](#-description-and-objective)
+- [Requirements](#-requirements)
+- [How to Contribute](#-how-to-contribute)
+- [Acknowledgement](#Acknowledgement) 
+
+
+## 🚀 Description and Objective
+
+This repository is focusing on SONiC-telemetry setup using Telegraf plug-in running on DES SONiC. Telegraf stream data to Prometheus dB and Grafana is use to make information human readable. All aspects of this configuration can be customized.
+
+
+## 📋 Requirements
+
+This repository has been tested with DES SOniC and ubuntu 20.04LTS 
+
+
+## 👏 How to Contribute
+
+We welcome contributions to the project. Please reference the CONTRIBUTING guide for more details.
+
+## Acknowledgement
+@val3r1o https://github.com/val3r1o
