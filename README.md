@@ -18,7 +18,7 @@ This repository is focusing on SONiC-telemetry setup using Telegraf plug-in runn
 
 please read "Procedure" file first, this explain the step-by-step tasks needed
 
-[Procedure](Procedure.md)
+[Procedure](src/Procedure.md)
 
 ## 📋 Requirements
 
