@@ -16,4 +16,4 @@ Create an Ubuntu Virtual machine with "good amount" of cpu/ram
 
 3-
 Configure the different aspect of the Grafana/Prometheus dashboard
-- 3.1 install grafana dashboard (readme file under "files" folder)
+- 3.1 install grafana dashboard (readme file under "src/grafana" folder)
