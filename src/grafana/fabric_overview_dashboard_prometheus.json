@@ -1,0 +1,344 @@
+{
+  "annotations": {
+    "list": [
+      {
+        "builtIn": 1,
+        "datasource": "-- Grafana --",
+        "enable": true,
+        "hide": true,
+        "iconColor": "rgba(0, 211, 255, 1)",
+        "name": "Annotations & Alerts",
+        "type": "dashboard"
+      }
+    ]
+  },
+  "description": "desc_Dell Enterprise SONiC : Fabric Overview",
+  "editable": true,
+  "gnetId": null,
+  "graphTooltip": 0,
+  "id": 30,
+  "links": [],
+  "panels": [
+    {
+      "datasource": null,
+      "fieldConfig": {
+        "defaults": {
+          "custom": {}
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 2,
+        "w": 5,
+        "x": 8,
+        "y": 0
+      },
+      "id": 4,
+      "options": {
+        "content": "<img src=\"http://172.17.95.15:3000/public/img/DellT.png\" alt=\"Dell Technologies\" width=\"244\" height=\"39\">",
+        "mode": "html"
+      },
+      "pluginVersion": "7.3.5",
+      "targets": [
+        {
+          "queryType": "randomWalk",
+          "refId": "A"
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "",
+      "transparent": true,
+      "type": "text"
+    },
+    {
+      "datasource": "Prometheus",
+      "fieldConfig": {
+        "defaults": {
+          "custom": {
+            "align": null,
+            "filterable": true
+          },
+          "mappings": [
+            {
+              "from": "",
+              "id": 1,
+              "text": "S5248-ON",
+              "to": "",
+              "type": 1,
+              "value": "x86_64-dellemc_s5248f_c3538-r0"
+            },
+            {
+              "from": "",
+              "id": 2,
+              "text": "Z9332-ON",
+              "to": "",
+              "type": 1,
+              "value": "x86_64-dellemc_z9332f_d1508-r0"
+            },
+            {
+              "from": "",
+              "id": 3,
+              "text": "S5224F-ON",
+              "to": "",
+              "type": 1,
+              "value": "x86_64-dellemc_s5224f_c3538-r0"
+            },
+            {
+              "from": "",
+              "id": 4,
+              "text": "S5232F-ON",
+              "to": "",
+              "type": 1,
+              "value": "x86_64-dellemc_s5232f_c3538-r0"
+            }
+          ],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "software_platform_name"
+            },
+            "properties": [
+              {
+                "id": "custom.width",
+                "value": 203
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "software_platform_name"
+            },
+            "properties": [
+              {
+                "id": "custom.width",
+                "value": 239
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Switch Name"
+            },
+            "properties": [
+              {
+                "id": "links",
+                "value": [
+                  {
+                    "targetBlank": true,
+                    "title": "",
+                    "url": "http://172.17.95.15:3000/d/xfpJB9FGz/1-node-exporter-for-prometheus-dashboard-en-v20201010?orgId=1&from=now-15m&to=now&var-job=${__value.raw}_NE"
+                  }
+                ]
+              },
+              {
+                "id": "custom.width",
+                "value": 114
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "__name__"
+            },
+            "properties": [
+              {
+                "id": "custom.width",
+                "value": 305
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Platform"
+            },
+            "properties": [
+              {
+                "id": "custom.width",
+                "value": 101
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Hardware Revision"
+            },
+            "properties": [
+              {
+                "id": "custom.width",
+                "value": 156
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Serial Number"
+            },
+            "properties": [
+              {
+                "id": "custom.width",
+                "value": 199
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Service Tag"
+            },
+            "properties": [
+              {
+                "id": "custom.width",
+                "value": 117
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 9,
+        "w": 21,
+        "x": 3,
+        "y": 2
+      },
+      "id": 2,
+      "options": {
+        "frameIndex": 1,
+        "showHeader": true,
+        "sortBy": []
+      },
+      "pluginVersion": "7.3.5",
+      "targets": [
+        {
+          "expr": "stg_system_eeprom_mac_addresses",
+          "format": "table",
+          "instant": true,
+          "interval": "",
+          "legendFormat": "",
+          "refId": "A"
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "",
+      "transformations": [
+        {
+          "id": "organize",
+          "options": {
+            "excludeByName": {
+              "Time": true,
+              "Value": true,
+              "__name__": true,
+              "component_0_config_name": true,
+              "component_0_name": true,
+              "component_0_state_description": true,
+              "component_0_state_id": false,
+              "component_0_state_location": true,
+              "component_0_state_mfg_date": true,
+              "component_0_state_mfg_name": true,
+              "component_0_state_name": true,
+              "component_0_state_oper_status": true,
+              "component_0_state_part_no": true,
+              "component_0_state_software_version": true,
+              "diag_version": true,
+              "diagnostics_capabilities_state_loopback": true,
+              "diagnostics_capabilities_state_pattern": true,
+              "diagnostics_capabilities_state_pattern_chk_host": true,
+              "diagnostics_capabilities_state_pattern_chk_media": true,
+              "diagnostics_capabilities_state_pattern_gen_host": true,
+              "diagnostics_capabilities_state_pattern_gen_media": true,
+              "diagnostics_capabilities_state_report": true,
+              "instance": true,
+              "job": true,
+              "manufacture_country": true,
+              "name": true,
+              "onie_version": true,
+              "source": true,
+              "vendor_name": true
+            },
+            "indexByName": {
+              "Time": 6,
+              "Value": 25,
+              "__name__": 7,
+              "base_mac_address": 5,
+              "component_0_name": 8,
+              "component_0_state_description": 9,
+              "component_0_state_hardware_version": 2,
+              "component_0_state_id": 1,
+              "component_0_state_location": 10,
+              "component_0_state_mfg_date": 11,
+              "component_0_state_mfg_name": 12,
+              "component_0_state_name": 13,
+              "component_0_state_oper_status": 14,
+              "component_0_state_part_no": 15,
+              "component_0_state_serial_no": 3,
+              "component_0_state_software_version": 16,
+              "diag_version": 17,
+              "host": 0,
+              "instance": 18,
+              "job": 19,
+              "manufacture_country": 20,
+              "name": 21,
+              "onie_version": 22,
+              "service_tag": 4,
+              "source": 23,
+              "vendor_name": 24
+            },
+            "renameByName": {
+              "base_mac_address": "Base MAC Address",
+              "component_0_state_hardware_version": "Hardware Revision",
+              "component_0_state_id": "Platform",
+              "component_0_state_location": "",
+              "component_0_state_part_no": "",
+              "component_0_state_serial_no": "Serial Number",
+              "component_0_state_software_version": "",
+              "host": "Switch Name",
+              "service_tag": "Service Tag",
+              "software_hardware_version": "Hardware Revision",
+              "software_platform_name": "Platform",
+              "software_serial_number": "Serial Number"
+            }
+          }
+        }
+      ],
+      "transparent": true,
+      "type": "table"
+    }
+  ],
+  "schemaVersion": 26,
+  "style": "dark",
+  "tags": [],
+  "templating": {
+    "list": []
+  },
+  "time": {
+    "from": "now-6h",
+    "to": "now"
+  },
+  "timepicker": {},
+  "timezone": "",
+  "title": "Dell Enterprise SONiC : Fabric Overview (P)",
+  "uid": "uZiMJ6PMz",
+  "version": 5
+}
