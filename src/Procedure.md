@@ -4,10 +4,10 @@
 The name of the steps are related to the name on the file to use, Where you can find the right commands to achive the specific step.
 </br>
 </br>
-</br>
+
 1-
 From SONiC Device point of view you need 2 actions:
-- 1.1 install telegraf      on SONiC (debian) subsystem 
+- 1.1 install telegraf      on SONiC (debian) subsystem
 - 1.2 install node_exporter on SONiC (debian) subsystem
 
 2-
