@@ -1,8 +1,9 @@
-# SONiC-telemetry setup
+# Step-by-Step procedure
 
-Step-by-Step procedure: </br>
 </br>
-The name of the steps are related to the name on the file to use
+The name of the steps are related to the name on the file to use, Where you can find the right commands to achive the specific step.
+</br>
+</br>
 </br>
 1-
 From SONiC Device point of view you need 2 actions:
