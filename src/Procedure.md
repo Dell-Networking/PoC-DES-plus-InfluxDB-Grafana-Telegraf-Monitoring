@@ -19,3 +19,7 @@ Configure the different aspect of the Grafana/Prometheus dashboard
 - 3.1 install grafana dashboard (readme file under "src/grafana" folder)
 
 [go to src file](#/src/)
+
+
+
+![architecture](https://user-images.githubusercontent.com/20860769/207547949-72f24b28-2438-46b5-9dc5-5145bd08a5b3.jpg)
