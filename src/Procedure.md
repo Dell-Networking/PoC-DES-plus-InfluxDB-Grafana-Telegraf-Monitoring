@@ -2,6 +2,8 @@
 
 Step-by-Step procedure: </br>
 </br>
+The name of the steps are related to the name on the file to use
+</br>
 1-
 From SONiC Device point of view you need 2 actions:
 - 1.1 install telegraf      on SONiC (debian) subsystem 
