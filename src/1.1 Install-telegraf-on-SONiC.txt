@@ -1,0 +1,12 @@
+upload the file on SONiC, you should see:
+admin@sonic:~$ ls 
+node_exporter-1.2.2.linux-amd64.tar.gz 
+telegraf_1.15.0_96b1d33c-0_amd64.deb 
+telegraf.conf
+
+-command list:
+
+sudo dpkg -i telegraf_1.15.0_96b1d33c-0_amd64.deb
+sudo mv telegraf.conf /etc/telegraf/
+sudo service telegraf restart
+sudo service telegraf status
