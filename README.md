@@ -1,8 +1,13 @@
 # Telegraf-Prometheus-Grafana
 
-This is the template repo for Dell Enterprise SONiC Proof-of-Concept repos. Adopt this repo as you see fit to meet your needs as you build out a reference PoC repo.
+[![Contributions welcome](https://img.shields.io/badge/contributions-welcome-orange.svg)](#-how-to-contribute)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/Dell-Networking/PoC-DES-plus-InfluxDB-Grafana-Telegraf-Monitoring/blob/main/LICENSE.md)
+[![GitHub issues](https://img.shields.io/github/issues/Dell-Networking/PoC-DES-plus-InfluxDB-Grafana-Telegraf-Monitoring)](https://github.com/Dell-Networking/PoC-DES-plus-InfluxDB-Grafana-Telegraf-Monitoring/issues)
 
-The formatting here should be basically maintained, with the source code in the src folder and an appropriate LICENCE and CONTRIBUTING guide available inline in the README or as separate files within the repo.
+Built and maintained by [Ben Goldstone](https://github.com/benjamingoldstone/), [Valerio Martini](https://github.com/val3r1o) and [Contributors](https://github.com/Dell-Networking/PoC-DES-plus-InfluxDB-Grafana-Telegraf-Monitoring/graphs/contributors)
+
+------------------
+Welcome to the Proof-of-Concept for streaming telemetry from Dell Enterprise SONiC-based switches to Prometheus or InfluxDB (utilizing Telegraf). We leverage Grafana for visualizing the data.
 
 ## Contents
 
@@ -14,20 +19,18 @@ The formatting here should be basically maintained, with the source code in the 
 
 ## 🚀 Description and Objective
 
-This repository is focusing on SONiC-telemetry setup using Telegraf plug-in running on DES SONiC. Telegraf stream data to Prometheus dB and Grafana is use to make information human readable. All aspects of this configuration can be customized.
+This repository is focusing on SONiC-telemetry setup using Telegraf plug-in running on DES SONiC. Telegraf streams data to Prometheus and Grafana is used to make information human-readable. All aspects of this configuration can be customized.
 
-please read "Procedure" file first, this explain the step-by-step tasks needed
+Please read "Procedure" file first, this explains the step-by-step tasks needed.
 
 [Procedure](src/Procedure.md)
 
 ## 📋 Requirements
 
-This repository has been tested with DES SOniC and ubuntu 20.04LTS 
+This repository has been tested with DES SONiC 3.5 and Ubuntu 20.04LTS 
 
 
 ## 👏 How to Contribute
 
-We welcome contributions to the project. Please reference the CONTRIBUTING guide for more details.
+We welcome contributions to the project. Please reference the [CONTRIBUTING](https://github.com/Dell-Networking/PoC-Index/blob/main/CONTRIBUTING.md) guide in the PoC-Index repo for more details (this guide is common across Dell Networking PoC projects).
 
-## Acknowledgement 
-@val3r1o https://github.com/val3r1o
