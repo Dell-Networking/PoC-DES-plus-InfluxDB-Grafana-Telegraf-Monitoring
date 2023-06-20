@@ -1,0 +1,423 @@
+{
+  "annotations": {
+    "list": [
+      {
+        "builtIn": 1,
+        "datasource": "-- Grafana --",
+        "enable": true,
+        "hide": true,
+        "iconColor": "rgba(0, 211, 255, 1)",
+        "name": "Annotations & Alerts",
+        "type": "dashboard"
+      }
+    ]
+  },
+  "description": "Dell Enterprise SONiC : Interface Rate (Prometheus)",
+  "editable": true,
+  "gnetId": null,
+  "graphTooltip": 0,
+  "id": 28,
+  "iteration": 1617995531828,
+  "links": [],
+  "panels": [
+    {
+      "datasource": "Prometheus",
+      "fieldConfig": {
+        "defaults": {
+          "custom": {
+            "align": null,
+            "filterable": false
+          },
+          "mappings": [
+            {
+              "from": "",
+              "id": 1,
+              "text": "",
+              "to": "",
+              "type": 1
+            }
+          ],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "__name__"
+            },
+            "properties": [
+              {
+                "id": "custom.width",
+                "value": 247
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "uptime"
+            },
+            "properties": [
+              {
+                "id": "custom.width",
+                "value": 96
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Address Family"
+            },
+            "properties": [
+              {
+                "id": "custom.width",
+                "value": 119
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Interface"
+            },
+            "properties": [
+              {
+                "id": "custom.width",
+                "value": 106
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "VRF"
+            },
+            "properties": [
+              {
+                "id": "custom.width",
+                "value": 70
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Local AS"
+            },
+            "properties": [
+              {
+                "id": "custom.width",
+                "value": 78
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Local RouterID"
+            },
+            "properties": [
+              {
+                "id": "custom.width",
+                "value": 112
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Remote AS"
+            },
+            "properties": [
+              {
+                "id": "custom.width",
+                "value": 88
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Remote RouterID"
+            },
+            "properties": [
+              {
+                "id": "custom.width",
+                "value": 126
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "State"
+            },
+            "properties": [
+              {
+                "id": "custom.width",
+                "value": 104
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName"
+            },
+            "properties": []
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 16,
+        "x": 3,
+        "y": 0
+      },
+      "id": 5,
+      "options": {
+        "frameIndex": 2,
+        "showHeader": true,
+        "sortBy": []
+      },
+      "pluginVersion": "7.3.5",
+      "repeat": "netif",
+      "repeatDirection": "v",
+      "targets": [
+        {
+          "expr": "BGPNeighbors_remoteAs{host=~\"[[switch]]\"}",
+          "format": "table",
+          "instant": true,
+          "interval": "",
+          "legendFormat": "[[AddrFamily]]",
+          "queryType": "randomWalk",
+          "refId": "A"
+        },
+        {
+          "expr": "BGPNeighbors_localAs{host=~\"[[switch]]\"}",
+          "format": "table",
+          "instant": true,
+          "interval": "",
+          "legendFormat": "[[AddrFamily]]",
+          "refId": "B"
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "BGP Neighbors",
+      "transformations": [
+        {
+          "id": "seriesToColumns",
+          "options": {
+            "byField": "remoteRouterID"
+          }
+        },
+        {
+          "id": "organize",
+          "options": {
+            "excludeByName": {
+              "AddrFamily 2": true,
+              "BGPNeighbor 2": true,
+              "Time 1": true,
+              "Time 2": true,
+              "Vrf 2": true,
+              "__name__ 1": true,
+              "__name__ 2": true,
+              "host 1": true,
+              "host 2": true,
+              "instance 1": true,
+              "instance 2": true,
+              "job 1": true,
+              "job 2": true,
+              "localRouterID 2": true,
+              "remoteRouterID": false,
+              "state 2": true,
+              "uptime 2": true
+            },
+            "indexByName": {
+              "AddrFamily 1": 0,
+              "AddrFamily 2": 15,
+              "BGPNeighbor 1": 1,
+              "BGPNeighbor 2": 16,
+              "Time 1": 9,
+              "Time 2": 14,
+              "Value #A": 5,
+              "Value #B": 3,
+              "Vrf 1": 2,
+              "Vrf 2": 17,
+              "__name__ 1": 10,
+              "__name__ 2": 18,
+              "host 1": 11,
+              "host 2": 19,
+              "instance 1": 12,
+              "instance 2": 20,
+              "job 1": 13,
+              "job 2": 21,
+              "localRouterID 1": 4,
+              "localRouterID 2": 22,
+              "remoteRouterID": 6,
+              "state 1": 7,
+              "state 2": 23,
+              "uptime 1": 8,
+              "uptime 2": 24
+            },
+            "renameByName": {
+              "AddrFamily 1": "Address Family",
+              "BGPNeighbor 1": "Interface",
+              "Value #A": "Remote AS",
+              "Value #B": "Local AS",
+              "Vrf 1": "VRF",
+              "__name__ 1": "",
+              "localRouterID 1": "Local RouterID",
+              "remoteRouterID": "Remote RouterID",
+              "state 1": "State",
+              "uptime 1": "Uptime"
+            }
+          }
+        }
+      ],
+      "transparent": true,
+      "type": "table"
+    }
+  ],
+  "schemaVersion": 26,
+  "style": "dark",
+  "tags": [],
+  "templating": {
+    "list": [
+      {
+        "current": {
+          "selected": false,
+          "text": "Prometheus",
+          "value": "Prometheus"
+        },
+        "error": null,
+        "hide": 0,
+        "includeAll": false,
+        "label": null,
+        "multi": false,
+        "name": "datasource",
+        "options": [],
+        "query": "prometheus",
+        "queryValue": "",
+        "refresh": 1,
+        "regex": "",
+        "skipUrlSync": false,
+        "type": "datasource"
+      },
+      {
+        "auto": true,
+        "auto_count": 30,
+        "auto_min": "10s",
+        "current": {
+          "selected": false,
+          "text": "1m",
+          "value": "1m"
+        },
+        "error": null,
+        "hide": 0,
+        "label": "Sampling",
+        "name": "Sampling",
+        "options": [
+          {
+            "selected": false,
+            "text": "auto",
+            "value": "$__auto_interval_Sampling"
+          },
+          {
+            "selected": false,
+            "text": "10s",
+            "value": "10s"
+          },
+          {
+            "selected": false,
+            "text": "30s",
+            "value": "30s"
+          },
+          {
+            "selected": true,
+            "text": "1m",
+            "value": "1m"
+          },
+          {
+            "selected": false,
+            "text": "2m",
+            "value": "2m"
+          },
+          {
+            "selected": false,
+            "text": "5m",
+            "value": "5m"
+          },
+          {
+            "selected": false,
+            "text": "10m",
+            "value": "10m"
+          },
+          {
+            "selected": false,
+            "text": "30m",
+            "value": "30m"
+          },
+          {
+            "selected": false,
+            "text": "1h",
+            "value": "1h"
+          }
+        ],
+        "query": "10s,30s,1m,2m,5m,10m,30m,1h",
+        "refresh": 2,
+        "skipUrlSync": false,
+        "type": "interval"
+      },
+      {
+        "allValue": null,
+        "current": {
+          "selected": false,
+          "text": "L1",
+          "value": "L1"
+        },
+        "datasource": "$datasource",
+        "definition": "label_values(ifcounters_counters_in_pkts, host)",
+        "error": null,
+        "hide": 0,
+        "includeAll": false,
+        "label": "switch",
+        "multi": false,
+        "name": "switch",
+        "options": [],
+        "query": "label_values(ifcounters_counters_in_pkts, host)",
+        "refresh": 1,
+        "regex": "",
+        "skipUrlSync": false,
+        "sort": 0,
+        "tagValuesQuery": "",
+        "tags": [],
+        "tagsQuery": "",
+        "type": "query",
+        "useTags": false
+      }
+    ]
+  },
+  "time": {
+    "from": "now-6h",
+    "to": "now"
+  },
+  "timepicker": {},
+  "timezone": "",
+  "title": "Dell Enterprise SONiC : BGP Neighbors (P)",
+  "uid": "zzjdX3PGz",
+  "version": 9
+}
